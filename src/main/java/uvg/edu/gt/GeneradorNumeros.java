@@ -1,25 +1,28 @@
 package uvg.edu.gt;
 
+import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
 public class GeneradorNumeros {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         int[] numbers = new int[3000];
         Random rand = new Random();
 
-        //generación de números es necesario llamar esta clase para cada uno de los algoritmos con los que trabajaremos
-        for (int i = 0; i < 3000; i++){
-            numbers[i] = rand.nextInt(10000);//Usaremos numeros entre 0 y 9999
+        // Generación de números aleatorios entre 0 y 9999
+        for (int i = 0; i < 3000; i++) {
+            numbers[i] = rand.nextInt(10000);
         }
 
-        try (FileWriter writer = new FileWriter("input.txt")){
-            for(int num: numbers){
-                writer.write(num + "\n");
+        // Usar BufferedWriter para mejorar la escritura en el archivo
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("input.txt"))) {
+            for (int num : numbers) {
+                writer.write(num + "\n");  // Escribir cada número en una nueva línea
             }
-            System.out.println("Archivo de numeros aleatorios generado.");
+            System.out.println("Archivo de números aleatorios generado correctamente.");
         } catch (IOException e) {
+            System.err.println("Error al generar el archivo de números aleatorios: " + e.getMessage());
             e.printStackTrace();
         }
     }
