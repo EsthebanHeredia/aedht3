@@ -1,15 +1,20 @@
 package uvg.edu.gt;
 
-import java.io.File;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.Files;
+import java.io.InputStreamReader;
 import java.util.List;
+import java.util.stream.Collectors;
 
-//comentario para verificar un commit
 public class Main {
     public static void main(String[] args) throws IOException {
-        // Leer los números del archivo
-        List<String> lines = Files.readAllLines(new File("input.txt").toPath());
+        // Leer el archivo input.txt desde src/main/resources
+        List<String> lines;
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+                Main.class.getClassLoader().getResourceAsStream("input.txt")))) {
+            lines = reader.lines().collect(Collectors.toList());
+        }
+
         int[] numbers = lines.stream().mapToInt(Integer::parseInt).toArray();
 
         // Crear instancias de los algoritmos de ordenamiento
