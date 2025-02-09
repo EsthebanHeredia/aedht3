@@ -8,7 +8,7 @@ import java.util.Random;
 //Comentario para arreglar
 public class GeneradorNumeros {
     public static void main(String[] args) {
-        int[] numbers = new int[3000];
+        int[] numbers = new int[2000];
         Random rand = new Random();
 
         // Generación de números aleatorios entre 0 y 9999
