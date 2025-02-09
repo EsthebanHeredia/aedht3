@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.util.List;
 
 //comentario para verificar un commit
-public class Main.java {
+public class Main {
     public static void main(String[] args) throws IOException {
         // Leer los números del archivo
         List<String> lines = Files.readAllLines(new File("input.txt").toPath());
