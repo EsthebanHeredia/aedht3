@@ -24,18 +24,18 @@ public class Main {
         startTime = System.nanoTime();
         radixSort.sort(numbers.clone()); // Usamos clone() para evitar modificar el array original
         endTime = System.nanoTime();
-        System.out.println("Radix Sort se tomo " + (endTime - startTime) + " nanosegundos.");
+        System.out.println("Radix Sort took " + (endTime - startTime) + " nanoseconds.");
 
         // Bucket Sort
         startTime = System.nanoTime();
         bucketSort.sort(numbers.clone());
         endTime = System.nanoTime();
-        System.out.println("Bucket Sort se tomo " + (endTime - startTime) + " nanosegundos.");
+        System.out.println("Bucket Sort took " + (endTime - startTime) + " nanoseconds.");
 
         // Heap Sort
         startTime = System.nanoTime();
         heapSort.sort(numbers.clone());
         endTime = System.nanoTime();
-        System.out.println("Heap Sort se tomo " + (endTime - startTime) + " nanosegundos.");
+        System.out.println("Heap Sort took " + (endTime - startTime) + " nanoseconds.");
     }
 }
