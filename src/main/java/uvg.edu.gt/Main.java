@@ -21,6 +21,7 @@ public class Main {
         RadixSort radixSort = new RadixSort();
         BucketSort bucketSort = new BucketSort();
         HeapSort heapSort = new HeapSort();
+        InsertionSort insertionSort = new InsertionSort();
 
         // Medir el tiempo de ejecución de cada algoritmo
         long startTime, endTime;
@@ -42,5 +43,11 @@ public class Main {
         heapSort.sort(numbers.clone());
         endTime = System.nanoTime();
         System.out.println("Heap Sort took " + (endTime - startTime) + " nanoseconds.");
+
+        //InsertionSort
+        startTime = System.nanoTime();
+        InsertionSort.sort(numbers.clone());
+        endTime = System.nanoTime();
+        System.out.println("Insertion Sort took " + (endTime - startTime) + " nanoseconds.");
     }
 }

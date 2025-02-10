@@ -1,9 +1,7 @@
 package uvg.edu.gt;
 
-import java.util.*;
-
 public class InsertionSort {
-    public static void sort(List<Integer> numbers) {
+    public static void sort(int[] numbers) {
         for (int i = 1; i < numbers.size(); i++) {
             int key = numbers.get(i);
             int j = i - 1;
