@@ -28,5 +28,29 @@ public class MainTest {
         QuickSort.sort(numbers);
         assertEquals(expected, numbers);
     }
+
+    @Test
+    void testBucketSort() {
+        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
+        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
+        BucketSort.sort(numbers);
+        assertEquals(expected, numbers);
+    }
+
+    @Test
+    void testHeapSort() {
+        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
+        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
+        HeapSort.sort(numbers);
+        assertEquals(expected, numbers);
+    }
+
+    @Test
+    void testRadixSort() {
+        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
+        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
+        Radix.sort(numbers);
+        assertEquals(expected, numbers);
+    }
     
 }
