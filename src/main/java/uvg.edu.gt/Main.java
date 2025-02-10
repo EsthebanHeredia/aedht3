@@ -23,6 +23,8 @@ public class Main {
         BucketSort bucketSort = new BucketSort();
         HeapSort heapSort = new HeapSort();
         InsertionSort insertionSort = new InsertionSort();
+        MergeSort mergeSort = new MergeSort();
+        QuickSort quickSort = new QuickSort();
 
         // Medir el tiempo de ejecución de cada algoritmo
         long startTime, endTime;
@@ -48,6 +50,18 @@ public class Main {
         //InsertionSort
         startTime = System.nanoTime();
         InsertionSort.sort(numbers.clone());
+        endTime = System.nanoTime();
+        System.out.println("Insertion Sort took " + (endTime - startTime) + " nanoseconds.");
+
+        //MergeSort
+        startTime = System.nanoTime();
+        MergeSort.sort(numbers.clone());
+        endTime = System.nanoTime();
+        System.out.println("Insertion Sort took " + (endTime - startTime) + " nanoseconds.");
+
+        //Quicksort
+        startTime = System.nanoTime();
+        QuickSort.sort(numbers.clone());
         endTime = System.nanoTime();
         System.out.println("Insertion Sort took " + (endTime - startTime) + " nanoseconds.");
     }
