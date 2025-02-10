@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class BucketSort {
-    public void sort(int[] arr) {
+    public static void sort(int[] arr) {
         if (arr.length <= 0) return;
 
         int minValue = arr[0];

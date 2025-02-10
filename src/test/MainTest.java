@@ -1,56 +1,86 @@
-package test;
+package uvg.edu.gt;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import java.util.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.util.Arrays;
 
 public class MainTest {
     @Test
     void testInsertionSort() {
-        List<Integer> numbers = Arrays.asList(5, 3, 8, 1, 2);
-        List<Integer> expected = Arrays.asList(1, 2, 3, 5, 8);
+        // Datos de entrada
+        int[] numbers = {2, 1};
+        int[] expected = {1, 2};
+
+        // Ejecutar el algoritmo de ordenación
         InsertionSort.sort(numbers);
-        assertEquals(expected, numbers);
-    }
 
-    @Test
-    void testMergeSort() {
-        List<Integer> numbers = Arrays.asList(10, 7, 2, 4, 9);
-        List<Integer> expected = Arrays.asList(2, 4, 7, 9, 10);
-        MergeSort.sort(numbers);
-        assertEquals(expected, numbers);
-    }
-
-    @Test
-    void testQuickSort() {
-        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
-        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
-        QuickSort.sort(numbers);
-        assertEquals(expected, numbers);
+        // Comparar el resultado con el esperado
+        assertTrue(Arrays.equals(expected, numbers), "El array no fue ordenado correctamente.");
     }
 
     @Test
     void testBucketSort() {
-        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
-        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
+        // Datos de entrada
+        int[] numbers = {15, 6, 3, 9, 12};
+        int[] expected = {3, 6, 9, 12, 15};
+
+        // Ejecutar el algoritmo de ordenación
         BucketSort.sort(numbers);
-        assertEquals(expected, numbers);
+
+        // Comparar el resultado con el esperado
+        assertTrue(Arrays.equals(expected, numbers), "El array no fue ordenado correctamente.");
     }
 
     @Test
     void testHeapSort() {
-        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
-        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
+        // Datos de entrada
+        int[] numbers = {15, 6, 3, 9, 12};
+        int[] expected = {3, 6, 9, 12, 15};
+
+        // Ejecutar el algoritmo de ordenación
         HeapSort.sort(numbers);
-        assertEquals(expected, numbers);
+
+        // Comparar el resultado con el esperado
+        assertTrue(Arrays.equals(expected, numbers), "El array no fue ordenado correctamente.");
+    }
+
+    @Test
+    void testMergeSort() {
+        // Datos de entrada
+        int[] numbers = {10, 7, 2, 4, 9};
+        int[] expected = {2, 4, 7, 9, 10};
+
+        // Ejecutar el algoritmo de ordenación
+        MergeSort.sort(numbers);
+
+        // Comparar el resultado con el esperado
+        assertTrue(Arrays.equals(expected, numbers), "El array no fue ordenado correctamente.");
+    }
+
+    @Test
+    void testQuickSort() {
+        // Datos de entrada
+        int[] numbers = {15, 6, 3, 9, 12};
+        int[] expected = {3, 6, 9, 12, 15};
+
+        // Ejecutar el algoritmo de ordenación
+        QuickSort.sort(numbers);
+
+        // Comparar el resultado con el esperado
+        assertTrue(Arrays.equals(expected, numbers), "El array no fue ordenado correctamente.");
     }
 
     @Test
     void testRadixSort() {
-        List<Integer> numbers = Arrays.asList(15, 6, 3, 9, 12);
-        List<Integer> expected = Arrays.asList(3, 6, 9, 12, 15);
-        Radix.sort(numbers);
-        assertEquals(expected, numbers);
+        // Datos de entrada
+        int[] numbers = {15, 6, 3, 9, 12};
+        int[] expected = {3, 6, 9, 12, 15};
+
+        // Ejecutar el algoritmo de ordenación
+        RadixSort.sort(numbers);
+
+        // Comparar el resultado con el esperado
+        assertTrue(Arrays.equals(expected, numbers), "El array no fue ordenado correctamente.");
     }
-    
 }
+

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 //Comentario para arreglar
 public class RadixSort {
-    public void sort(int[] arr) {
+    public static void sort(int[] arr) {
         int max = Arrays.stream(arr).max().getAsInt(); // Encuentra el número máximo
 
         for (int exp = 1; max / exp > 0; exp *= 10) {
@@ -12,7 +12,7 @@ public class RadixSort {
         }
     }
 
-    private void countingSort(int[] arr, int exp) {
+    private static void countingSort(int[] arr, int exp) {
         int[] output = new int[arr.length];
         int[] count = new int[10];
 
