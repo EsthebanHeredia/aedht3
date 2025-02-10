@@ -9,7 +9,11 @@ import java.util.Random;
 //Comentario para arreglar
 public class GeneradorNumeros {
     public static void main(String[] args) {
+<<<<<<< HEAD
         int[] numbers = new int[10];
+=======
+        int[] numbers = new int[2000];
+>>>>>>> 96c1b48 (Prueba con 2000 enteros)
         Random rand = new Random();
 
         // Generación de números aleatorios entre 0 y 9999
