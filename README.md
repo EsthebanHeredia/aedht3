@@ -43,8 +43,3 @@ Para ejecutar el proyecto y las pruebas de rendimiento:
 2. Haz clic en el botón de ejecución (play) en la esquina superior derecha de IntelliJ IDEA.
 3. Utiliza el profiler integrado de IntelliJ IDEA para analizar el rendimiento de los algoritmos de ordenamiento.
 
-¡Y eso es todo! Ahora estás listo para probar la velocidad de diferentes algoritmos de ordenamiento en Java.
-
-```
-
-¿Hay algo más que te gustaría agregar o modificar en este `README.md`?
