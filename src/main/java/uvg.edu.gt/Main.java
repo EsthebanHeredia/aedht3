@@ -57,12 +57,12 @@ public class Main {
         startTime = System.nanoTime();
         MergeSort.sort(numbers.clone());
         endTime = System.nanoTime();
-        System.out.println("Insertion Sort took " + (endTime - startTime) + " nanoseconds.");
+        System.out.println("Merge Sort took " + (endTime - startTime) + " nanoseconds.");
 
         //Quicksort
         startTime = System.nanoTime();
         QuickSort.sort(numbers.clone());
         endTime = System.nanoTime();
-        System.out.println("Insertion Sort took " + (endTime - startTime) + " nanoseconds.");
+        System.out.println("Quick Sort took " + (endTime - startTime) + " nanoseconds.");
     }
 }
