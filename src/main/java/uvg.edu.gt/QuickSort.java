@@ -3,11 +3,11 @@ package uvg.edu.gt;
 import java.util.*;
 
 public class QuickSort {
-    public static void sort(List<Integer> numbers) {
-        quickSort(numbers, 0, numbers.size() - 1);
+    public static void sort(int[] numbers) {
+        quickSort(numbers, 0, numbers.length - 1);
     }
 
-    private static void quickSort(List<Integer> numbers, int low, int high) {
+    private static void quickSort(int[] numbers, int low, int high) {
         if (low < high) {
             int partitionIndex = partition(numbers, low, high);
             quickSort(numbers, low, partitionIndex - 1);
@@ -15,16 +15,22 @@ public class QuickSort {
         }
     }
 
-    private static int partition(List<Integer> numbers, int low, int high) {
-        int pivot = numbers.get(high);
+    private static int partition(int[] numbers, int low, int high) {
+        int pivot = numbers[high];
         int i = low - 1;
         for (int j = low; j < high; j++) {
-            if (numbers.get(j) <= pivot) {
+            if (numbers[j] <= pivot) {
                 i++;
-                Collections.swap(numbers, i, j);
+                swap(numbers, i, j);
             }
         }
-        Collections.swap(numbers, i + 1, high);
+        swap(numbers, i + 1, high);
         return i + 1;
+    }
+
+    private static void swap(int[] numbers, int i, int j) {
+        int temp = numbers[i];
+        numbers[i] = numbers[j];
+        numbers[j] = temp;
     }
 }

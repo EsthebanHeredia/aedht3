@@ -5,7 +5,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
-
+//Comentario para arreglar
 public class GeneradorNumeros {
     public static void main(String[] args) {
         int[] numbers = new int[3000];
